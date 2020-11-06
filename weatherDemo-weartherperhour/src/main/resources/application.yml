@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: weatherperhour
+server:
+  port: 7005
+  servlet:
+    context-path: /weatherperhour
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:5060/eureka/eureka
