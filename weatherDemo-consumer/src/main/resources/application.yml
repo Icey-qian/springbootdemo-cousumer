@@ -1,0 +1,14 @@
+server:
+  port: 7001
+  servlet:
+    context-path: /consumer
+spring:
+  application:
+    name: consumer-server
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5060/eureka/eureka

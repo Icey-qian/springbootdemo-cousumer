@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<!-- Head -->
+<head>
+
+    <title>天气详情</title>
+
+    <!-- For-Mobile-Apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //For-Mobile-Apps -->
+
+    <!-- Style --> <link rel="stylesheet" th:href="@{css/detailStyle.css}" type="text/css" media="all" />
+
+    <!-- Web-Fonts -->
+    <link href='http://fonts.useso.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Raleway:100,200' rel='stylesheet' type='text/css'>
+    <!-- //Web-Fonts -->
+
+</head>
+<!-- Head -->
+
+
+
+<!-- Body -->
+<body onload="startTime()">
+
+<!-- Container -->
+<div class="container">
+
+    <div class="detail">
+        <div class="shade">
+            <div class="temp"><p th:text="${temperature}"></p></div>
+            <div class="disaster">
+                气象灾害预警：
+                <p th:text="${title}"></p>
+                <p th:text="${description}"></p>
+                <p th:text="${pub_date}"></p>
+            </div>
+            <div class="inform">
+                <table>
+                    <tr>
+                        <td>体感温度</td>
+                        <td th:text="${feels_like}+'°C'"></td>
+                    </tr>
+                    <tr>
+                        <td>气压</td>
+                        <td th:text="${pressure}+'mb'"></td>
+                    </tr>
+                    <tr>
+                        <td>相对湿度</td>
+                        <td th:text="${humidity}+'%'"></td>
+                    </tr>
+                    <tr>
+                        <td>能见度</td>
+                        <td th:text="${visibility}+'km'"></td>
+                    </tr>
+                    <tr>
+                        <td>风向</td>
+                        <td th:text="${wind_direction}"></td>
+                    </tr>
+                    <tr>
+                        <td>风向角度</td>
+                        <td th:text="${wind_direction_degree}+'°'"></td>
+                    </tr>
+                    <tr>
+                        <td>风速</td>
+                        <td th:text="${wind_speed}+'km/H'"></td>
+                    </tr>
+                    <tr>
+                        <td>风力等级</td>
+                        <td th:text="${wind_scale}"></td>
+                    </tr>
+                    <tr>
+                        <td>云量</td>
+                        <td th:text="${clouds}+'%'"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Container -->
+
+<script>
+
+</script>
+</body>
+</html>
